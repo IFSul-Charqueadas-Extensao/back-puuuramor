@@ -18,9 +18,10 @@ Antes de começar, certifique-se de que o computador onde o projeto será config
 ## Clonar o Projeto
 Copie o projeto para o computador de destino. Você pode fazer isso via Git ou manualmente:
 ### Via Git:
+    cd C:\wamp64\www\web.local
     git clone <URL_DO_REPOSITORIO>
-    Copie os arquivos do projeto para o diretório C:\wamp64\www\web.local
-    Descompacte os arquivos dentro de "web.local" e aceite subsituir.
+
+Descompacte os arquivos dentro de "web.local" e aceite subsituir.
 
 **Como o tema é feito com bootstrap, descompacte o arquivo tema.zip dentro da pasta "public"**
 
@@ -33,10 +34,8 @@ Baixar o [Composer](https://getcomposer.org/Composer-Setup.exe)
 - Abrir o Prompt de Comando
 - Abra o cmd.
 
-- Navegue até o diretório do seu projeto: 
-> cd C:\wamp64\www\web.local
-- Instalar as Dependências: 
-> composer install
+- Navegue até o diretório do seu projeto: `cd C:\wamp64\www\web.local`
+- Instalar as Dependências: `composer install`
 
 
 ## Crie um banco de dados no MySQL
