@@ -1,0 +1,27 @@
+CRITICAL - 2025-05-04 17:10:34 --> Cannot assign App\Models\LoginModel to property CodeIgniter\Shield\Authentication\Authenticators\Session::$loginModel of type CodeIgniter\Shield\Models\LoginModel
+in VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php on line 87.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Authentication.php(67): CodeIgniter\Shield\Authentication\Authenticators\Session->__construct(Object(CodeIgniter\Shield\Models\UserModel))
+ 2 VENDORPATH\codeigniter4\shield\src\Auth.php(95): CodeIgniter\Shield\Authentication\Authentication->factory('session')
+ 3 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(68): CodeIgniter\Shield\Auth->getAuthenticator()
+ 4 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(221): CodeIgniter\Shield\Collectors\Auth->getTitleDetails()
+ 5 SYSTEMPATH\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+ 6 SYSTEMPATH\Debug\Toolbar.php(370): CodeIgniter\Debug\Toolbar->run(1746378633.881011, 0.0946, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 7 SYSTEMPATH\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 8 SYSTEMPATH\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+ 9 SYSTEMPATH\CodeIgniter.php(517): CodeIgniter\Filters\Filters->run('produtos/listar', 'after')
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\web.local\\public\\index.php')
+CRITICAL - 2025-05-04 17:10:40 --> Cannot assign App\Models\LoginModel to property CodeIgniter\Shield\Authentication\Authenticators\Session::$loginModel of type CodeIgniter\Shield\Models\LoginModel
+in VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php on line 87.
+ 1 VENDORPATH\codeigniter4\shield\src\Authentication\Authentication.php(67): CodeIgniter\Shield\Authentication\Authenticators\Session->__construct(Object(CodeIgniter\Shield\Models\UserModel))
+ 2 VENDORPATH\codeigniter4\shield\src\Auth.php(95): CodeIgniter\Shield\Authentication\Authentication->factory('session')
+ 3 VENDORPATH\codeigniter4\shield\src\Collectors\Auth.php(68): CodeIgniter\Shield\Auth->getAuthenticator()
+ 4 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(221): CodeIgniter\Shield\Collectors\Auth->getTitleDetails()
+ 5 SYSTEMPATH\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+ 6 SYSTEMPATH\Debug\Toolbar.php(370): CodeIgniter\Debug\Toolbar->run(1746378640.64646, 0.0269, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+ 7 SYSTEMPATH\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+ 8 SYSTEMPATH\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), null)
+ 9 SYSTEMPATH\CodeIgniter.php(517): CodeIgniter\Filters\Filters->run('/', 'after')
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
