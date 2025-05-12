@@ -11,8 +11,9 @@ $routes = Services::routes();
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Home');
+$routes->setDefaultController('PublicHome');
 $routes->setDefaultMethod('index');
+
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
 // The Auto Routing (Legacy) is very dangerous. It is easy to create vulnerable apps
@@ -29,7 +30,17 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+$routes->get('/', 'PublicHome::index');
+$routes->get('/login', 'Login::index');
+$routes->get('/loja', 'Loja::index');
+$routes->get('/apadrinhar', 'Apadrinhar::index');
+$routes->get('/adotar', 'Adotar::index');
+$routes->get('/parceiros', 'Parceiros::index');
+$routes->get('/resgates', 'Resgates::index');
+$routes->get('/transparencia', 'Transparencia::index');
+$routes->get('/quero_ajudar', 'Quero_Ajudar::index');
+
+
 
 /*
  * --------------------------------------------------------------------
