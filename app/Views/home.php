@@ -3,50 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Puuuramor - ONG de Resgate Animal</title>
+    <title>Puuuramor | ONG de Resgate Animal</title>
     <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Cagliostro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="<?= base_url('assets/css/header_footer.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/home.css') ?>">
     <script defer src="<?= base_url('assets/js/home.js') ?>"></script>
 </head>
 <body class="bg-light">
+    <?php echo View('header.php')?>
     <section class="hero">
         <h1 style="z-index: 2;">Bem-vindo à Puuuramor</h1>
         <p style="z-index: 2;">Uma ONG dedicada ao resgate e adoção de animais em busca de um lar amoroso.</p>
-        <a href="#adocao" class="btn-hero" style="z-index: 2;">Ver animais para adoção</a>
+        <a href="<?= base_url('adotar')?>" class="btn-hero" style="z-index: 2;">Ver animais para adoção</a>
     </section>    
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Puuuramor</a>
-            <div class="logo"></div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('adotar') ?>">Adotar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('apadrinhar') ?>">Apadrinhar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('loja') ?>">Loja</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('quero_ajudar') ?>">Quero ajudar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('transparencia') ?>">Transparência</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    
     <section id="carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="d-flex justify-content-center align-items-center">
         <!-- Indicadores -->

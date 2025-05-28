@@ -5,18 +5,9 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
-.titulo{
-    margin-top: -20px;
-    margin-bottom: 20px;
+#container{
+    padding-top: 45px;
 }
-.titulo, .card-title{
-    color: rgb(134, 123, 141);
-}
-
-.navbar {
-    background-color: #8c7db1;
-}
-
 .price {
     font-size: 18px;
     font-weight: bold;
