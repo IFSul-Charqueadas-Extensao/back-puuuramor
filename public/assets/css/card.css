@@ -1,3 +1,17 @@
+body {
+    font-family: 'Capriola', sans-serif;
+    background-color: #F3DFF0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+#adocao{
+    padding-top: 45px !important;
+}
+
+#titulo{
+    padding-top: 45px;
+}
 .card {
     position: relative;
     overflow: hidden;
@@ -31,4 +45,66 @@
     z-index: 1;
     bottom: 50px;
     right: 5px;
+}
+
+.wrapper-button{
+    width: 60px;
+    height: 60px;
+
+    background-color: #FBE68A; 
+    border-radius: 50%;       
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+.wrapper-button:hover{
+    background-color: #aca0cb; 
+
+}
+.adotar{
+    width: 60px;
+    height: 60px;
+    background-color: #4A4A4A;
+    -webkit-mask-image: url('../images/icons/ButtonAdopt1.svg');
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-image: url('../images/icons/ButtonAdopt1.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+}
+.wrapper-button-2{
+    width: 60px;
+    height: 60px;
+
+    background-color: #FBE68A; 
+    border-radius: 50%;       
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+.wrapper-button-2:hover{
+    background-color: #aca0cb; 
+
+}
+.apadrinhar{
+    width: 60px;
+    height: 60px;
+    background-color: #4A4A4A;
+    -webkit-mask-image: url('../images/icons/ButtonApadrinhar1.svg');
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-image: url('../images/icons/ButtonApadrinhar1.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+}
+.card-body {
+    margin: 0px;
+    padding: 1vh;
+}
+
+.modal-body .btn{
+    background-color: #FBE68A;
+    color: #4A4A4A;
 }

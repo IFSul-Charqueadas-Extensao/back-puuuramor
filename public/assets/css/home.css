@@ -75,17 +75,7 @@ nav{
     z-index: 0;
 } 
 
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-}
 
-.navbar ul{
-    text-align: end;
-}
 
 .hero h1 {
     font-size: 3rem;
@@ -181,33 +171,6 @@ nav{
     background-color: #f0ce37;
 }
 
-.wrapper-button{
-    width: 60px;
-    height: 60px;
-
-    background-color: #FBE68A; 
-    border-radius: 50%;       
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.3s;
-}
-.wrapper-button:hover{
-    background-color: #aca0cb; 
-
-}
-.adotar{
-    width: 60px;
-    height: 60px;
-    background-color: #4A4A4A;
-    -webkit-mask-image: url('../images/icons/ButtonAdopt1.svg');
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: contain;
-    mask-image: url('../images/icons/ButtonAdopt1.svg');
-    mask-repeat: no-repeat;
-    mask-size: contain;
-  
-}
 .wrapper-button-2{
     width: 60px;
     height: 60px;
@@ -233,15 +196,6 @@ nav{
     mask-repeat: no-repeat;
     mask-size: contain;
   
-}
-.card-body {
-    margin: 0px;
-    padding: 1vh;
-}
-
-.modal-body .btn{
-    background-color: #FBE68A;
-    color: #4A4A4A;
 }
 .modal-body .btn:hover{
     background-color: #f0ce37;
