@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Cagliostro&display=swap" rel="stylesheet">
+    <script defer src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="<?= base_url('assets/css/card.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/header_footer.css') ?>">
+    <script defer src="<?= base_url('assets/js/adotar.js') ?>"></script>
+
+    <title>Adotar | PuuurAmor</title>
 </head>
 <body>
-<section id="adocao" class="container my-5 text-center">
+    <?php echo View('header.php')?>
+        <section id="adocao" class="container my-5 text-center">
         <h2>Adotar</h2>
         <p>Dê um lar cheio de amor para um de nossos animaizinhos!</p>
         <div class="row" id="animal-container">
@@ -25,35 +34,6 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="https://jcpportraits.com/wp-content/uploads/2024/04/Organic-Social_Instagram_Standard-2_1080x1080.jpg" class="card-img-top" alt="Cachorro">
-                    <div class="card-body">
-                        <h5 class="card-title">Rex</h5>
-                        <!-- Botão de adoção -->
-                        <button class="btn" data-bs-toggle="modal" data-bs-target="#adoptModal" data-name="Rex" data-description="Rex é um cachorro de grande porte que precisa de um espaço amplo para brincar. Ele é super leal e protetor." data-image="https://jcpportraits.com/wp-content/uploads/2024/04/Organic-Social_Instagram_Standard-2_1080x1080.jpg">
-                            <div class="wrapper-button">
-                                <div class="adotar"></div>
-                            </div>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="https://i.pinimg.com/originals/05/00/b9/0500b96dec3dc9c807226c3bf359ed75.jpg" class="card-img-top" alt="Gato">
-                    <div class="card-body">
-                        <h5 class="card-title">Luna</h5>
-                        <!-- Botão de adoção -->
-                        <button class="btn" data-bs-toggle="modal" data-bs-target="#adoptModal" data-name="Luna" data-description="Luna é uma gata tranquila que adora um bom lugar para dormir. Ela precisa de uma família que ofereça carinho e cuidados." data-image="https://i.pinimg.com/originals/05/00/b9/0500b96dec3dc9c807226c3bf359ed75.jpg">
-                            <div class="wrapper-button">
-                                <div class="adotar"></div>
-                            </div>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
        
         <!-- Animais extras escondidos -->
         <div class="row d-none" id="extra-adotaveis">
@@ -108,5 +88,6 @@
             </div>
         </div>
     </section>
+
 </body>
 </html>
