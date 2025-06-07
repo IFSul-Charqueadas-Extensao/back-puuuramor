@@ -1,41 +1,46 @@
 <?php
 
-namespace App\Database\Migrations;
+namespace App\Models;
 
-use CodeIgniter\Database\Migration;
+use CodeIgniter\Model;
 
-class Produtos extends Migration
+class ProdutoModel extends Model
 {
-    public function up()
-    {
-        $this->forge->addField([
-            'ProdutoId' => [
-                'type'           => 'INT',
-                'constraint'     => 11,
-                'usigned'        => TRUE,
-                'auto_increment' => TRUE
-            ],
+    protected $table = 'produtos';
+    protected $primaryKey = 'id';
 
-            'Nome' => [
-                'type'       => 'VARCHAR',
-                'constraint' => 128
-            ],
+    protected $allowedFields = [
+        'nome',
+        'descricao',
+        'preco',
+        'imagem',
+        'estoque',
+        'created_at',
+        'updated_at'
+    ];
 
-            'Qtde' => [
-                'type' => 'INT'
-            ],
+    protected $useTimestamps = true;
 
-            'Valor' => [
-                'type' => 'DOUBLE'
-            ],
-        ]);
+    protected $validationRules = [
+        'nome' => 'required|min_length[2]',
+        'preco' => 'required|decimal|greater_than_equal_to[0]',
+        'estoque' => 'required|integer|greater_than_equal_to[0]',
+    ];
 
-        $this->forge->addKey('ProdutoId', TRUE);
-        $this->forge->createTable('produtos');
-    }
-
-    public function down()
-    {
-        $this->forge->dropTable('produtos');
-    }
+    protected $validationMessages = [
+        'nome' => [
+            'required' => 'O nome do produto é obrigatório.',
+            'min_length' => 'O nome deve ter pelo menos 2 caracteres.',
+        ],
+        'preco' => [
+            'required' => 'Informe o preço.',
+            'decimal' => 'O preço deve ser um número com casas decimais.',
+            'greater_than_equal_to' => 'O preço não pode ser negativo.',
+        ],
+        'estoque' => [
+            'required' => 'Informe o estoque.',
+            'integer' => 'O estoque deve ser um número inteiro.',
+            'greater_than_equal_to' => 'O estoque não pode ser negativo.',
+        ],
+    ];
 }
