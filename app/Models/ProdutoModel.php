@@ -6,13 +6,9 @@ use CodeIgniter\Model;
 
 class ProdutoModel extends Model
 {
-    protected $DBGroup          = 'default';
-    protected $table            = 'produtos';
-    protected $primaryKey       = 'ProdutoId';
-    protected $useAutoIncrement = true;
-    protected $returnType       = 'array';
-    protected $useSoftDeletes   = false;
-    protected $protectFields    = true;
+    protected $table = 'produtos';
+    protected $primaryKey = 'id';
+
     protected $allowedFields = [
         'nome',
         'descricao',
@@ -23,27 +19,28 @@ class ProdutoModel extends Model
         'updated_at'
     ];
 
-    // Dates
-    protected $useTimestamps = false;
-    protected $dateFormat    = 'datetime';
-    protected $createdField  = 'created_at';
-    protected $updatedField  = 'updated_at';
-    protected $deletedField  = 'deleted_at';
+    protected $useTimestamps = true;
 
-    // Validation
-    protected $validationRules      = [];
-    protected $validationMessages   = [];
-    protected $skipValidation       = false;
-    protected $cleanValidationRules = true;
+    protected $validationRules = [
+        'nome' => 'required|min_length[2]',
+        'preco' => 'required|decimal|greater_than_equal_to[0]',
+        'estoque' => 'required|integer|greater_than_equal_to[0]',
+    ];
 
-    // Callbacks
-    protected $allowCallbacks = true;
-    protected $beforeInsert   = [];
-    protected $afterInsert    = [];
-    protected $beforeUpdate   = [];
-    protected $afterUpdate    = [];
-    protected $beforeFind     = [];
-    protected $afterFind      = [];
-    protected $beforeDelete   = [];
-    protected $afterDelete    = [];
+    protected $validationMessages = [
+        'nome' => [
+            'required' => 'O nome do produto é obrigatório.',
+            'min_length' => 'O nome deve ter pelo menos 2 caracteres.',
+        ],
+        'preco' => [
+            'required' => 'Informe o preço.',
+            'decimal' => 'O preço deve ser um número com casas decimais.',
+            'greater_than_equal_to' => 'O preço não pode ser negativo.',
+        ],
+        'estoque' => [
+            'required' => 'Informe o estoque.',
+            'integer' => 'O estoque deve ser um número inteiro.',
+            'greater_than_equal_to' => 'O estoque não pode ser negativo.',
+        ],
+    ];
 }
