@@ -4,20 +4,24 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class ProdutoModel extends Model
+class DoacaoModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'produtos';
-    protected $primaryKey       = 'ProdutoId';
+    protected $table            = 'doacao';
+    protected $primaryKey       = 'animal_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
-        'ProdutoId',
-        'Nome',
-        'Qtde',
-        'Valor',
+        'animal_id',
+        'nome',
+        'especie',
+        'idade',
+        'castrado',
+        'vacinado',
+        'descricao',
+        'foto',
     ];
 
     // Dates
