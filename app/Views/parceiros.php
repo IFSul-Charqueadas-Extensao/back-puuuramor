@@ -8,7 +8,9 @@
     <script defer src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="<?= base_url('assets/css/header_footer.css') ?>">
-        <link rel="stylesheet" href="<?= base_url('assets/css/parceiro_card.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/parceiro_card.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/home.css') ?>">
+    <script defer src="<?= base_url('assets/js/home.js') ?>"></script>
     <title>Parceiros| Puuuramor</title>
 </head>
 <body class="bg-light">
@@ -198,4 +200,30 @@
     <footer class="footer text-center">
         <p>&copy; 2025 Puuuramor - Todos os direitos reservados</p>
     </footer>
+                    
+    <!-- Modal de Contato -->
+    <div class="modal fade" id="contatoModal" tabindex="-1" aria-labelledby="contatoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contatoModalLabel">Enviar Mensagem</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Seu Nome">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Seu Email">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="4" placeholder="Sua Mensagem"></textarea>
+                        </div>
+                        <button type="submit" class="btn  w-100">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </html>
