@@ -15,28 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 document.addEventListener('DOMContentLoaded', function () {
-    const modal = new bootstrap.Modal(document.getElementById('modalNoticia'));
-    const modalTitle = document.getElementById('modalNoticiaLabel');
-    const modalDescription = document.getElementById('modalDescricao');
-
-    document.querySelectorAll('.saiba-mais').forEach(button => {
-      button.addEventListener('click', function (event) {
-        event.preventDefault(); // impede o comportamento padrão
-        event.stopPropagation(); // impede o evento de "vazar" para o carrossel
-
-        const slide = this.closest('.carousel-item');
-
-        const titulo = slide.getAttribute('data-bs-title');
-        const descricao = slide.getAttribute('data-bs-description');
-
-        modalTitle.textContent = titulo;
-        modalDescription.textContent = descricao;
-
-        modal.show();
-      });
-    });
-  });
-document.addEventListener('DOMContentLoaded', function () {
     const carousel = document.getElementById('carousel');
     let startX = 0;
 
