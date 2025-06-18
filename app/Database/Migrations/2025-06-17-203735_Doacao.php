@@ -17,7 +17,6 @@ class Doacao extends Migration
             'animal_id' => [
                 'type'       => 'INT',
                 'unsigned'   => true,
-                'auto_increment' => true,
             ],
             'nome' => [
                 'type'       => 'VARCHAR',

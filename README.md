@@ -32,6 +32,9 @@ Baixar o [Composer](https://getcomposer.org/Composer-Setup.exe)
 Execute as migrações dentro do terminal do vscode(ctrl + " e selecionar terminal cmd) (essencial):
 	php spark migrate
 
+Execute o seeder para incluir o usuário admin padrão
+	php spark db:seed AdminUserSeeder
+
 Execute o servidor(essencial):
 	php spark serve
 
@@ -51,3 +54,15 @@ Acesse: http://localhost:8080
 	| database.default.username = root                                                                 | 
 	| database.default.password = <sua_senha>                                                          | 
 	| database.default.DBDriver = MySQLi                                                               | 
+
+## Editar credenciais do usuário administrador:
+
+- Configure as credenciais do usuário admin:
+- O arquivo de configuração AdminUserSeeder.php se encontra no diretório `/app/Config/Database/Seeds/AdminUserSeeder.php`.
+ - Edite as seguintes variáveis
+ 
+| Variável    | Descrição             |
+|-------------|-----------------------|
+| `$username` | Nome de usuário       |
+| `$email`    | Email do usuário      |
+| `$password` | Senha do usuário      |

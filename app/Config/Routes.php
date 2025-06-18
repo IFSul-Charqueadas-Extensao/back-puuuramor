@@ -31,7 +31,6 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'PublicHome::index');
-$routes->get('/login', 'Login::index');
 $routes->get('/loja', 'Loja::index');
 $routes->get('/apadrinhar', 'Apadrinhar::index');
 $routes->get('/adotar', 'Adotar::index');
@@ -39,6 +38,17 @@ $routes->get('/parceiros', 'Parceiros::index');
 $routes->get('/resgates', 'Resgates::index');
 $routes->get('/transparencia', 'Transparencia::index');
 $routes->get('/quero_ajudar', 'Quero_Ajudar::index');
+
+// Shield Routes
+//service('auth')->routes($routes);
+
+service('auth')->routes($routes, [
+    'except' => ['register', 'magic-link', 'forgot', 'reset-password']
+]);
+
+// Protected Routes
+$routes->group('', ['filter' => 'session'], static function($routes) {
+});
 
 
 
