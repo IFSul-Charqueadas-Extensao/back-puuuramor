@@ -47,9 +47,6 @@ h3 {
     border: 1px solid #ffffff66;
 
 }
-a{
-    text-decoration: none;
-}
 nav{
     transition: background-color 0.3s ease-in-out;
 }
