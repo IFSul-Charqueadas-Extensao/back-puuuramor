@@ -13,14 +13,11 @@ class ProdutoModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields = [
-        'nome',
-        'descricao',
-        'preco',
-        'imagem',
-        'estoque',
-        'created_at',
-        'updated_at'
+    protected $allowedFields    = [
+        'ProdutoId',
+        'Nome',
+        'Qtde',
+        'Valor',
     ];
 
     // Dates
