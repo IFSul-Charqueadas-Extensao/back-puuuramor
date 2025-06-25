@@ -1,0 +1,51 @@
+body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#agradecimento{
+    padding-top: 45px !important;
+}
+
+.parceiro-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+}
+
+.parceiro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+#item{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+}
+
+#item:hover{
+    transform: translateY(-5px);
+}
+
+#como-ajudar img{
+    transition: transform 0.3s ease;
+}
+
+#como-ajudar img:hover {
+    transform: scale(1.03);
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-parceiros {
+        padding: 80px 20px;
+    }
+    
+    .hero-parceiros h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-parceiros p {
+        font-size: 1.2rem;
+    }
+}
