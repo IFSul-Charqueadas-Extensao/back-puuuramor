@@ -39,6 +39,25 @@ $routes->get('/resgates', 'Resgates::index');
 $routes->get('/transparencia', 'Transparencia::index');
 $routes->get('/quero_ajudar', 'Quero_Ajudar::index');
 
+//----- Galeria -----//
+$routes->get('/galeria', 'Galeria::index');
+
+//Lista
+$routes->get("/galeria/listar", "Galeria::list");
+
+//Adicionar
+$routes->get("/galeria/criar", "Galeria::create");
+$routes->post("/galeria/salvar", "Galeria::store");
+
+//Editar
+$routes->get("/galeria/editar/(:num)", "Galeria::edit/$1");
+
+//Deletar
+$routes->post("/galeria/deletar/(:num)", "Galeria::delete/$1");
+
+//Exibir(Modal)
+$routes->get('galeria/exibir/(:num)', 'Galeria::exibir/$1');
+
 // Shield Routes
 //service('auth')->routes($routes);
 
