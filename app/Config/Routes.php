@@ -32,14 +32,31 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'PublicHome::index');
 $routes->get('/loja', 'Loja::index');
+$routes->get('/apadrinhar', 'Apadrinhar::index');
 $routes->get('/adotar', 'Adotar::index');
 $routes->get('/parceiros', 'Parceiros::index');
 $routes->get('/resgates', 'Resgates::index');
 $routes->get('/transparencia', 'Transparencia::index');
 $routes->get('/quero_ajudar', 'Quero_Ajudar::index');
 
-//----- Apadrinhar -----//
-$routes->get('/apadrinhar', 'Apadrinhar::index');
+//----- Galeria -----//
+$routes->get('/galeria', 'Galeria::index');
+
+//Lista
+$routes->get("/galeria/listar", "Galeria::list");
+
+//Adicionar
+$routes->get("/galeria/criar", "Galeria::create");
+$routes->post("/galeria/salvar", "Galeria::store");
+
+//Editar
+$routes->get("/galeria/editar/(:num)", "Galeria::edit/$1");
+
+//Deletar
+$routes->post("/galeria/deletar/(:num)", "Galeria::delete/$1");
+
+//Exibir(Modal)
+$routes->get('galeria/exibir/(:num)', 'Galeria::exibir/$1');
 
 // Shield Routes
 //service('auth')->routes($routes);
@@ -50,21 +67,6 @@ service('auth')->routes($routes, [
 
 // Protected Routes
 $routes->group('', ['filter' => 'session'], static function($routes) {
-    //Lista
-    $routes->get("/apadrinhar/listar", "Apadrinhar::list");
-
-    //Adicionar
-    $routes->get("/apadrinhar/criar", "Apadrinhar::create");
-    $routes->post("/apadrinhar/salvar", "Apadrinhar::store");
-
-    //Editar
-    $routes->get("/apadrinhar/editar/(:num)", "Apadrinhar::edit/$1");
-
-    //Deletar
-    $routes->post("/apadrinhar/deletar/(:num)", "Apadrinhar::delete/$1");
-
-    //Exibir(Modal)
-    $routes->get('apadrinhar/exibir/(:num)', 'Apadrinhar::exibir/$1');
 });
 
 
