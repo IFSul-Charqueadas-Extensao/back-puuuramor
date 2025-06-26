@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,16 +14,17 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/home.css') ?>">
     <script defer src="<?= base_url('assets/js/home.js') ?>"></script>
 </head>
+
 <body class="bg-light">
-    <?php echo View('header.php')?>
+    <?php echo View('header.php') ?>
     <section class="hero">
         <h1 style="z-index: 2;">Bem-vindo à Puuuramor</h1>
         <p style="z-index: 2;">Uma ONG dedicada ao resgate e adoção de animais em busca de um lar amoroso.</p>
-        <a href="<?= base_url('adotar')?>" class="btn-hero" style="z-index: 2;">Ver animais para adoção</a>
-    </section>    
+        <a href="<?= base_url('adotar') ?>" class="btn-hero" style="z-index: 2;">Ver animais para adoção</a>
+    </section>
     <section id="carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="d-flex justify-content-center align-items-center">
-        <!-- Indicadores -->
+            <!-- Indicadores -->
             <section id="carouselExemplo" class="carousel slide" data-bs-ride="carousel">
                 <!-- Indicadores -->
                 <div class="carousel-indicators">
@@ -30,7 +32,7 @@
                     <button type="button" data-bs-target="#carouselExemplo" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carouselExemplo" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-                
+
                 <!-- Slides -->
                 <div class="carousel-inner">
                     <div class="carousel-item active" style="background-image: url('<?= base_url("assets/images/foto1-news.jpeg") ?>')" data-bs-title="Título do Primeiro Slide" data-bs-description="Uma breve descrição sobre o conteúdo deste slide. Aqui você pode colocar informações importantes.">
@@ -60,22 +62,22 @@
         </div>
         <!-- Modal -->
         <div class="modal fade" id="modalNoticia" tabindex="-1" aria-labelledby="modalNoticiaLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="modalNoticiaLabel">Título da Notícia</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <p id="modalDescricao">Aqui vai o conteúdo da notícia.</p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-              </div>
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalNoticiaLabel">Título da Notícia</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="modalDescricao">Aqui vai o conteúdo da notícia.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-    </section> 
+    </section>
 
 
     <section id="nossa-historia" class="bg-white py-5">
@@ -87,25 +89,25 @@
                 <small>Nossa História</small>
             </div>
 
-                <!-- Imagem de destaque -->
+            <!-- Imagem de destaque -->
             <div class="mb-5">
                 <img src="<?= base_url('assets/images/animais/cachorro2.jpeg') ?>" alt="Imagem do projeto" class="img-fluid rounded-4 shadow w-100" style="max-height: 450px; object-fit: cover;">
             </div>
 
-                <!-- Corpo da notícia -->
+            <!-- Corpo da notícia -->
             <div class="row">
                 <div class="col-lg-10 mx-auto">
                     <p class="fs-5 mb-4">O Projeto Puuur Amor nasceu a partir de um encontro que mudou o curso de duas vidas – e, desde então, a de centenas de animais. Em setembro de 2017, as protetoras Andressa Einloft e Kátia Einloft resgataram uma gatinha grávida abandonada em uma rua de Charqueadas. A partir desse gesto, identificaram um propósito comum: acolher, cuidar e oferecer uma nova chance aos animais que não tinham um lar.</p>
-                    
+
                     <p class="fs-5 mb-4">Em 2018, foi construído o primeiro gatil, simples, porém acolhedor. Ele abrigava, inicialmente, 12 gatos – incluindo mães prenhas e filhotes abandonados. Nos dois primeiros anos, o trabalho foi realizado de forma totalmente independente, dentro da própria residência das fundadoras, com recursos financeiros próprios, dedicação diária e o objetivo de proporcionar novos lares aos animais resgatados.</p>
-                    
+
                     <!-- Imagem no meio do texto -->
                     <div class="text-center my-5">
-                    <img src="<?= base_url('assets/images/animais/gato1.jpeg') ?>" alt="Gatil e resgates" class="img-fluid rounded-3 shadow" style="max-height: 400px;">
+                        <img src="<?= base_url('assets/images/animais/gato1.jpeg') ?>" alt="Gatil e resgates" class="img-fluid rounded-3 shadow" style="max-height: 400px;">
                     </div>
 
                     <p class="fs-5 mb-4">Com o tempo, o número de resgates aumentou, assim como os desafios. Em 2019, a mudança de endereço e os custos com aluguel trouxeram instabilidade financeira, especialmente diante da crescente demanda por cuidados veterinários, alimentação e medicamentos para os cerca de 20 animais já sob tutela.</p>
-                    
+
                     <p class="fs-5 mb-4">A chegada da pandemia, em 2020, impôs ainda mais obstáculos. Mas também revelou o poder da mobilização. Por meio das redes sociais, surgiram os primeiros apoiadores, pessoas sensibilizadas pela causa que decidiram contribuir. Rifas, doações e parcerias pontuais ajudaram a manter a estrutura e garantiram a continuidade do trabalho. No ano seguinte, oficialmente, nascia o Projeto Puuur Amor.</p>
 
                     <p class="fs-5 mb-4">Hoje, mesmo com maior reconhecimento na cidade, a ONG segue enfrentando limitações: ainda não possui sede própria, nem tem um próprio meio de locomoção, não conta com patrocínio fixo e depende exclusivamente da solidariedade de quem acredita na causa. Todo animal acolhido recebe atendimento veterinário, é vermifugado, vacinado e castrado antes de ser disponibilizado para adoção responsável.</p>
@@ -122,7 +124,7 @@
     <section id="missao-valores" class="py-5 bg-dark">
         <div class="container text-white">
             <div class="row align-items-center">
-            <!-- Coluna de imagem ilustrativa -->
+                <!-- Coluna de imagem ilustrativa -->
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <img src="<?= base_url('assets/images/animais/gato2.jpg') ?>" alt="Missão do projeto" class="img-fluid rounded-4 shadow">
                 </div>
@@ -152,13 +154,13 @@
                         <i class="bi bi-paw-fill text-warning fs-4 me-3"></i>
                         <p class="mb-0 fs-5">
                             Atualmente cuidamos de <strong>44 animais</strong> (41 gatos e 3 cães), todos preparados com atenção para adoção.
-                         </p>
+                        </p>
                     </div>
 
                     <p class="fs-5 mt-4">
                         Se você acredita na nossa missão, existem muitas formas de ajudar: <strong>adotando, apadrinhando, sendo voluntário, compartilhando</strong> ou contribuindo com doações.
                     </p>
-                        <!-- Botão de apoio -->
+                    <!-- Botão de apoio -->
                     <a href="<?= base_url('quero_ajudar') ?>" class="btn btn-success btn-lg mt-3 px-4">Quero Ajudar</a>
 
                 </div>
@@ -166,61 +168,61 @@
         </div>
     </section>
 
- 
 
-            <!-- Apoiadores -->
-        <section id="apoie" class="py-5 bg-light">
+
+    <!-- Apoiadores -->
+    <section id="apoie" class="py-5 bg-light">
         <div class="container">
 
             <!-- Apoiadores -->
             <div class="row align-items-center flex-lg-row-reverse mb-5">
-            <div class="col-lg-5 mb-4 mb-lg-0">
-                <img src="assets/images/parceiros/parceiros2.jpeg" alt="Apoiadores" class="img-fluid rounded shadow">
-            </div>
-            <div class="col-lg-7 text-center text-lg-start">
-                <h2 class="fw-bold">Apoiadores do Puuur Amor</h2>
-                <p class="lead">Conheça as empresas e pessoas que acreditam na nossa missão de transformar vidas.</p>
-                <a href="<?= base_url('parceiros') ?>" class="btn btn-outline-dark">Ver Apoiadores</a>
-            </div>
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <img src="assets/images/parceiros/parceiros2.jpeg" alt="Apoiadores" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-7 text-center text-lg-start">
+                    <h2 class="fw-bold">Apoiadores do Puuur Amor</h2>
+                    <p class="lead">Conheça as empresas e pessoas que acreditam na nossa missão de transformar vidas.</p>
+                    <a href="<?= base_url('parceiros') ?>" class="btn btn-outline-dark">Ver Apoiadores</a>
+                </div>
             </div>
 
             <!-- Loja -->
             <div class="row align-items-center mb-5">
-            <div class="col-lg-5 mb-4 mb-lg-0">
-                <img src="assets/images/loja/loja1.png" alt="Amimal comendo racao" class="img-fluid rounded shadow">
-            </div>
-            <div class="col-lg-7 text-center text-lg-start">
-                <h2 class="fw-bold">Loja Solidária</h2>
-                <p class="lead">Ajude a ONG comprando produtos. Toda compra gera impacto direto no cuidado dos animais.</p>
-                <a href="<?= base_url('loja') ?>" class="btn btn-success">Visitar Loja</a>
-            </div>
-            </div>
-
-            <!-- Contato -->
-            <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <h2 class="fw-bold">Fale com a Gente</h2>
-                <p class="lead">Tem dúvidas, quer colaborar ou conhecer mais sobre o projeto? Entre em contato:</p>
-
-                <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
-                <a href="https://wa.me/numero" target="_blank" class="btn btn-outline-success">
-                    <i class="bi bi-whatsapp me-1"></i> WhatsApp
-                </a>
-                <a href="https://www.instagram.com/projeto.puuuramor/" target="_blank" class="btn btn-outline-danger">
-                    <i class="bi bi-instagram me-1"></i> Instagram
-                </a>
-                <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#contatoModal">
-                    <i class="bi bi-envelope me-1"></i> Enviar Mensagem
-                </button>
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <img src="assets/images/loja/loja1.png" alt="Amimal comendo racao" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-7 text-center text-lg-start">
+                    <h2 class="fw-bold">Loja Solidária</h2>
+                    <p class="lead">Ajude a ONG comprando produtos. Toda compra gera impacto direto no cuidado dos animais.</p>
+                    <a href="<?= base_url('loja') ?>" class="btn btn-success">Visitar Loja</a>
                 </div>
             </div>
-            </div>
 
+            <section id="contato" class="bg-white py-5">
+                <!-- Contato -->
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="fw-bold">Fale com a Gente</h2>
+                        <p class="lead">Tem alguma dúvida, quer ajudar ou precisa conversar com a gente? Escolha a melhor forma de entrar em contato, vamos adorar ouvir você! Clique no botão abaixo.</p>
+                        <!-- <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+                            <a href="https://wa.me/numero" target="_blank" class="btn btn-outline-success">
+                                <i class="bi bi-whatsapp me-1"></i> WhatsApp
+                            </a>
+                            <a href="https://www.instagram.com/projeto.puuuramor/" target="_blank" class="btn btn-outline-danger">
+                                <i class="bi bi-instagram me-1"></i> Instagram
+                            </a>
+                            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#contatoModal">
+                                <i class="bi bi-envelope me-1"></i> Enviar Mensagem
+                            </button>
+                        </div> -->
+                        <a href="/contatos" class="btn btn-success btn-lg mt-3 px-4">Contatos</a>
+                    </div>
+                </div>
         </div>
-        </section>
-    
+    </section>
+
     <!-- Modal de Contato -->
-    <div class="modal fade" id="contatoModal" tabindex="-1" aria-labelledby="contatoModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="contatoModal" tabindex="-1" aria-labelledby="contatoModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -244,11 +246,11 @@
             </div>
         </div>
     </div>
-    
-
+    </section> -->
 
     <footer class="footer text-center">
         <p>&copy; 2025 Puuuramor - Todos os direitos reservados</p>
     </footer>
 </body>
+
 </html>
