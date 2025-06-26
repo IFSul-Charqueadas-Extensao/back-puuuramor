@@ -31,7 +31,6 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'PublicHome::index');
-$routes->get('/login', 'Login::index');
 $routes->get('/loja', 'Loja::index');
 $routes->get('/apadrinhar', 'Apadrinhar::index');
 $routes->get('/adotar', 'Adotar::index');
@@ -39,6 +38,36 @@ $routes->get('/parceiros', 'Parceiros::index');
 $routes->get('/resgates', 'Resgates::index');
 $routes->get('/transparencia', 'Transparencia::index');
 $routes->get('/quero_ajudar', 'Quero_Ajudar::index');
+
+//----- Galeria -----//
+$routes->get('/galeria', 'Galeria::index');
+
+//Lista
+$routes->get("/galeria/listar", "Galeria::list");
+
+//Adicionar
+$routes->get("/galeria/criar", "Galeria::create");
+$routes->post("/galeria/salvar", "Galeria::store");
+
+//Editar
+$routes->get("/galeria/editar/(:num)", "Galeria::edit/$1");
+
+//Deletar
+$routes->post("/galeria/deletar/(:num)", "Galeria::delete/$1");
+
+//Exibir(Modal)
+$routes->get('galeria/exibir/(:num)', 'Galeria::exibir/$1');
+
+// Shield Routes
+//service('auth')->routes($routes);
+
+service('auth')->routes($routes, [
+    'except' => ['register', 'magic-link', 'forgot', 'reset-password']
+]);
+
+// Protected Routes
+$routes->group('', ['filter' => 'session'], static function($routes) {
+});
 
 
 

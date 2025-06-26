@@ -14,6 +14,9 @@
                         <a class="nav-link" href="<?= base_url('apadrinhar') ?>">Apadrinhar</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="<?= base_url('galeria') ?>">Galeria</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="<?= base_url('loja') ?>">Loja</a>
                     </li>
                     <li class="nav-item">
