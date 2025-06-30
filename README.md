@@ -30,12 +30,19 @@ Baixar o [Composer](https://getcomposer.org/Composer-Setup.exe)
 
 ## Executar dentro do VSCODE
 Execute as migrações dentro do terminal do vscode(ctrl + " e selecionar terminal cmd) (essencial):
-	`php spark migrate --all`
+```bash
+php spark migrate --all
+```
 
-Execute o seeder para incluir o usuário admin padrão: `php spark db:seed AdminUserSeeder`
+Execute o seeder para incluir o usuário admin padrão: 
+```bash
+php spark db:seed AdminUserSeeder
+```
 
 Execute o servidor(essencial):
-	`php spark serve`
+```bash
+php spark serve
+```
 
 Acesse: http://localhost:8080
 
