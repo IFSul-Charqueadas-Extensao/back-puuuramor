@@ -4,15 +4,10 @@ body {
     color: #4A4A4A;
 }
 
-
-.navbar-brand, .nav-link {
-    color: white !important;
-    transition: color 0.3s ease-in-out;
-
+a{
+    text-decoration: none;
 }
-.nav-link:hover{
-    color: #ffffffa4 !important;
-}
+
 .logo{
     width: 60px;
     height: 60px;
@@ -26,11 +21,7 @@ body {
     display: block;
     margin-left: 0;
 }
-.navbar-brand{
-    color: white;
-    padding: 0px;
-    margin: 0 20px;
-}
+
 h1, h2{
     font-family: 'Capriola', sans-serif;
 }
@@ -43,13 +34,7 @@ h3 {
 .bg-amarelo {
     background-color: #FBE68A;
 }
-.navbar-toggler{
-    border: 1px solid #ffffff66;
 
-}
-nav{
-    transition: background-color 0.3s ease-in-out;
-}
 
 .hero {
     position: relative;
@@ -229,23 +214,6 @@ nav{
 } */
 
 @media(max-width: 990px){
-    .navbar ul li {
-        gap: 15px;
-        padding: 10px;
-        border-bottom: 1px solid #ccc;
-    }
-    .navbar ul li a{
-        border-radius: 5px;
-    }
-    .navbar ul{
-        margin-top: 10px;
-        border-radius: 10px !important;
-        text-align: center;
-        background-color: #B5A3E0;
-    }
-    .navbar ul li:last-child {
-        border-bottom: none;
-      }
       .card{
         height:40vh;
       }

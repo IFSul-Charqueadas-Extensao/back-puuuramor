@@ -5,6 +5,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+.navbar
 .navbar-brand, .nav-link {
     color: white !important;
     transition: color 0.3s ease-in-out;
@@ -39,7 +40,21 @@ body {
     z-index: 10;
     background-color: #8c7db1;
 }
+.navbar-toggler{
+    border: 1px solid #ffffff66;
 
+}
+.navbar-brand, .nav-link {
+    color: white !important;
+    transition: color 0.3s ease-in-out;
+
+}
+.nav-link:hover{
+    color: #ffffffa4 !important;
+}
+nav{
+    transition: background-color 0.3s ease-in-out;
+}
 .navbar ul{
     text-align: end;
 }
@@ -48,4 +63,35 @@ body {
     background-color: #c6b8e6;
     color: #ffffff;
     padding: 20px;
+}
+
+@media(max-width: 990px){
+    .navbar ul li {
+        gap: 15px;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    .navbar ul li a{
+        border-radius: 5px;
+    }
+    .navbar ul{
+        margin-top: 10px;
+        border-radius: 10px !important;
+        text-align: center;
+        background-color: #B5A3E0;
+    }
+    .navbar ul li:last-child {
+        border-bottom: none;
+      }
+}
+
+@media(max-width: 575px){
+    .container {
+        width: 80%;
+    }
+}
+
+#resgates-section {
+    margin-top: 80px; /* Adjusted for fixed navbar */
 }

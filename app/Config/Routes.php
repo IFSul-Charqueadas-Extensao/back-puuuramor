@@ -76,6 +76,36 @@ $routes->post("/apadrinhar/deletar/(:num)", "Apadrinhar::delete/$1");
 //Exibir(Modal)
 $routes->get('apadrinhar/exibir/(:num)', 'Apadrinhar::exibir/$1');
 
+//Adotar 
+$routes->group('adotar', function($routes){
+    $routes->get('/', 'Adotar::index');
+    $routes->get('listar', 'Adotar::list');
+    $routes->get('criar', 'Adotar::create');
+    $routes->get('editar/(:num)', 'Adotar::edit/$1');
+    $routes->post('salvar', 'Adotar::store');
+    $routes->post('deletar/(:num)', 'Adotar::delete/$1');
+    $routes->get('exibir/(:num)', 'Adotar::exibir/$1');
+});
+
+//Routes
+$routes->group('resgates', function($routes) {
+    // Página principal mostrando as histórias de resgate (lista)
+    $routes->get('', 'Resgates::index');
+
+    // Rota para mostrar detalhes via AJAX (JSON)
+    $routes->get('exibir/(:num)', 'Resgates::exibir/$1');
+
+    // Rotas para administração (se quiser)
+    $routes->get('criar', 'Resgates::create');
+    $routes->post('salvar', 'Resgates::store');
+    $routes->get('editar/(:num)', 'Resgates::edit/$1');
+    $routes->post('deletar/(:num)', 'Resgates::delete/$1');
+
+    // Lista para administração (opcional)
+    $routes->get('listar', 'Resgates::list');
+});
+
+
 // Shield Routes
 //service('auth')->routes($routes);
 

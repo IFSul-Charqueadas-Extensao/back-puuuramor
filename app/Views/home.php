@@ -35,27 +35,27 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active" style="background-image: url('<?= base_url("assets/images/foto1-news.jpeg") ?>')" data-bs-title="Título do Primeiro Slide" data-bs-description="Uma breve descrição sobre o conteúdo deste slide. Aqui você pode colocar informações importantes.">
                         <div class="carousel-caption">
-                            <h2>Resgates</h2>
-                            <p>Casos emocionantes e impactantes de resgate.</p>
-                            <button class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalNoticia">Saiba Mais</button>
+                        <h2>Resgates</h2>
+                        <p>Casos emocionantes e impactantes de resgate.</p>
+                        <a class="saiba-mais" href="<?= base_url('resgates') ?>">Saiba Mais</a>
                         </div>
                     </div>
                     <div class="carousel-item" style="background-image: url('<?= base_url("assets/images/foto2-news.jpg") ?>')" data-bs-title="Título do Segundo Slide" data-bs-description="Outra descrição breve e atrativa para este slide. Destaque os principais pontos do seu conteúdo.">
                         <div class="carousel-caption">
-                            <h2>Faça sua doação</h2>
-                            <p>Nos ajude a comprar os medicamentos e rações para nossos gatinhos.</p>
-                            <button class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalNoticia">Saiba Mais<i class="fas fa-arrow-right"></i></button>
+                        <h2>Faça sua doação</h2>
+                        <p>Nos ajude a comprar os medicamentos e rações para nossos gatinhos.</p>
+                        <a class="saiba-mais" href="<?= base_url('quero_ajudar') ?>">Saiba Mais <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="carousel-item" style="background-image: url('<?= base_url("assets/images/foto1-news.jpeg") ?>')" data-bs-title="Título do Terceiro Slide" data-bs-description="Mais uma descrição interessante para este slide. Mantenha seu texto curto e direto ao ponto.">
                         <div class="carousel-caption">
-                            <h2>Galeria</h2>
-                            <p>Momentos fofos e marcantes.</p>
-                            <button class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalNoticia">Saiba Mais <i class="fas fa-arrow-right"></i></button>
-                            </button>
+                        <h2>Galeria</h2>
+                        <p>Momentos fofos e marcantes.</p>
+                        <a class="saiba-mais" href="<?= base_url('galeria') ?>">Saiba Mais <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
-                </div>
+                    </div>
+
             </section>
         </div>
         <!-- Modal -->
