@@ -18,7 +18,7 @@
   <section class="contato-section">
     <h1 class="text-center">Fale com a Gente 💌</h1>
     <p>Tem alguma dúvida, quer ajudar ou simplesmente conversar? Estamos aqui para ouvir você!<br>
-    Entre em contato pelos nossos canais:</p>
+      Entre em contato pelos nossos canais:</p>
 
     <div class="canal">
       <strong>📱 WhatsApp</strong><br>

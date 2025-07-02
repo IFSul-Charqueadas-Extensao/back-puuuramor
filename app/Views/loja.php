@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,8 +14,8 @@
     <script src defer="<?= base_url('assets/js/loja.js') ?>"></script>
 </head>
 
-<body> 
-    <?php echo View('header.php')?>        
+<body>
+    <?php echo View('header.php') ?>
     <div class="container text-center my-5" id="container">
         <h2 class="titulo">Produtos para seu pet 🐾</h2>
         <div class="row row-cols-1 row-cols-md-3 g-4" id="product-container">
@@ -22,7 +23,7 @@
                 <div class="card product-card">
                     <h5 class="card-title">Ração Premium</h5>
                     <img src="https://images.petz.com.br/fotos/1708614057884.jpg" alt="Produto 1">
-                        <p class="price">R$ 49,90</p>
+                    <p class="price">R$ 49,90</p>
                     <div class="product-info">Refeição Natural Zee.Dog Kitchen Lata para Cães Adultos Sabor Frango
                         <button class="btn btn-primary mt-2" id="meuBotao">Comprar</button>
                     </div>
@@ -42,7 +43,7 @@
                 <div class="card product-card">
                     <h5 class="card-title">Ração Premium</h5>
                     <img src="https://images.petz.com.br/fotos/1715289228426.jpg" alt="Produto 3">
-                        <p class="price">R$ 49,90</p>
+                    <p class="price">R$ 49,90</p>
                     <div class="product-info">Refeição Natural Zee.Dog Kitchen Lata para Cães Adultos Sabor Frango
                         <button class="btn btn-primary mt-2" id="meuBotao">Comprar</button>
                     </div>
@@ -81,14 +82,14 @@
         </div>
         <button class="btn btn-secondary mt-4" id="load-more">Veja mais</button>
     </div>
-    
-            <section id="contato" class="bg-white py-5">
-                <!-- Contato -->
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <h2 class="fw-bold">Fale com a Gente</h2>
-                        <p class="lead">Tem alguma dúvida, quer ajudar ou precisa conversar com a gente? Escolha o assunto e entre em contato pelo e-mail correspondente. Vamos adorar ouvir você!</p>
-                        <!-- <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+
+    <section id="contato" class="bg-white py-5">
+        <!-- Contato -->
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="fw-bold">Fale com a Gente</h2>
+                <p class="lead">Tem alguma dúvida, quer ajudar ou precisa conversar com a gente? Escolha o assunto e entre em contato pelo e-mail correspondente. Vamos adorar ouvir você!</p>
+                <!-- <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
                             <a href="https://wa.me/numero" target="_blank" class="btn btn-outline-success">
                                 <i class="bi bi-whatsapp me-1"></i> WhatsApp
                             </a>
@@ -99,9 +100,9 @@
                                 <i class="bi bi-envelope me-1"></i> Enviar Mensagem
                             </button>
                         </div> -->
-                        <a href="/contatos" class="btn btn-success btn-lg mt-3 px-4">Contatos</a>
-                    </div>
-                </div>
+                <a href="/contatos" class="btn btn-success btn-lg mt-3 px-4">Contatos</a>
+            </div>
+        </div>
         </div>
     </section>
 
@@ -136,4 +137,5 @@
         <p>&copy; 2025 Puuuramor - Todos os direitos reservados</p>
     </footer>
 </body>
+
 </html>

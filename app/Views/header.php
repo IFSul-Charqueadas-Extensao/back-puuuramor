@@ -1,6 +1,6 @@
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="<?= base_url('')?>">Puuuramor</a>
+            <a class="navbar-brand" href="<?= base_url('') ?>">Puuuramor</a>
             <div class="logo"></div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -16,6 +16,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="<?= base_url('galeria') ?>">Galeria</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= base_url('gatinhos') ?>">Gatinhos</a>
+                    </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link" href=" base_url('loja') ">Loja</a>
                     </li> -->
@@ -29,4 +32,3 @@
             </div>
         </div>
     </nav>
-    
