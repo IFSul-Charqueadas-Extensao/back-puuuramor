@@ -2,30 +2,19 @@
 
 namespace App\Controllers;
 
+use App\Models\AnimalModel;
+
 class Gatinhos extends BaseController
 {
     public function index()
     {
-        $data['adotaveis'] = [
-            ['nome' => 'Mimi', 'descricao' => 'Gatinha brincalhona', 'imagem' => 'mimi.jpg'],
-            ['nome' => 'Toby', 'descricao' => 'Gato calmo e carinhoso', 'imagem' => 'toby.jpg'],
-        ];
+        $model = new AnimalModel();
 
-        $data['nao_adotaveis'] = [
-            ['nome' => 'Felix', 'descricao' => 'Gato selvagem, não domesticável', 'imagem' => 'felix.jpg'],
-        ];
-
-        $data['especiais'] = [
-            ['nome' => 'Luna', 'descricao' => 'Necessidades especiais, precisa de cuidados', 'imagem' => 'luna.jpg'],
-        ];
-
-        $data['ja_adotados'] = [
-            ['nome' => 'Simba', 'descricao' => 'Já encontrou um lar feliz', 'imagem' => 'simba.jpg'],
-        ];
-
-        $data['memorial'] = [
-            ['nome' => 'Garfield', 'descricao' => 'Em memória', 'imagem' => 'garfield.jpg'],
-        ];
+        $data['adotaveis'] = $model->where(['especie' => 'gato', 'categoria' => 'adotavel'])->findAll();
+        $data['nao_adotaveis'] = $model->where(['especie' => 'gato', 'categoria' => 'nao_adotavel'])->findAll();
+        $data['especiais'] = $model->where(['especie' => 'gato', 'categoria' => 'especial'])->findAll();
+        $data['ja_adotados'] = $model->where(['especie' => 'gato', 'categoria' => 'ja_adotado'])->findAll();
+        $data['memorial'] = $model->where(['especie' => 'gato', 'categoria' => 'memorial'])->findAll();
 
         return view('gatinhos', $data);
     }
