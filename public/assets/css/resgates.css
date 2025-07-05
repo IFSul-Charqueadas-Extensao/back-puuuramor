@@ -1,0 +1,26 @@
+body{
+    margin-top: 80px;
+}
+.resgates-imgs img {
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.resgates-imgs img:hover {
+    transform: scale(1.03);
+}
+
+.card {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.card-title {
+    color: #8c7db1;
+
+}
+
+.card-text {
+    color: #5a5a5a;
+}

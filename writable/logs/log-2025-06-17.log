@@ -1,0 +1,191 @@
+CRITICAL - 2025-06-17 20:31:21 --> Undefined variable $produtos
+in APPPATH\Views\animais_doacao\listar2.php on line 167.
+ 1 APPPATH\Views\animais_doacao\listar2.php(167): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $produtos', 'C:\\wamp64\\www\\back-puuuramor\\app\\Views\\animais_doacao\\listar2.php', 167)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\wamp64\\www\\back-puuuramor\\app\\Views\\animais_doacao\\listar2.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('animais_doacao/listar2', [], true)
+ 5 APPPATH\Controllers\DoacaoDash.php(12): view('animais_doacao/listar2')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DoacaoDash->Listar2()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DoacaoDash))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\back-puuuramor\\public\\index.php')
+ERROR - 2025-06-17 20:47:00 --> mysqli_sql_exception: Table 'produtos' already exists in C:\wamp64\www\back-puuuramor\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\back-puuuramor\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `p...', 0)
+#1 C:\wamp64\www\back-puuuramor\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 C:\wamp64\www\back-puuuramor\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 C:\wamp64\www\back-puuuramor\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 C:\wamp64\www\back-puuuramor\app\Database\Migrations\2025-06-16-220215_Createprodutos.php(34): CodeIgniter\Database\Forge->createTable('produtos')
+#5 C:\wamp64\www\back-puuuramor\system\Database\MigrationRunner.php(877): App\Database\Migrations\Produtos->up()
+#6 C:\wamp64\www\back-puuuramor\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\wamp64\www\back-puuuramor\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\wamp64\www\back-puuuramor\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\wamp64\www\back-puuuramor\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\wamp64\www\back-puuuramor\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2025-06-17 20:52:43 --> mysqli_sql_exception: Table 'produtos' already exists in C:\wamp64\www\back-puuuramor\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\back-puuuramor\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `p...', 0)
+#1 C:\wamp64\www\back-puuuramor\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 C:\wamp64\www\back-puuuramor\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 C:\wamp64\www\back-puuuramor\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 C:\wamp64\www\back-puuuramor\app\Database\Migrations\2025-06-16-220215_Createprodutos.php(34): CodeIgniter\Database\Forge->createTable('produtos')
+#5 C:\wamp64\www\back-puuuramor\system\Database\MigrationRunner.php(877): App\Database\Migrations\Produtos->up()
+#6 C:\wamp64\www\back-puuuramor\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\wamp64\www\back-puuuramor\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\wamp64\www\back-puuuramor\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\wamp64\www\back-puuuramor\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\wamp64\www\back-puuuramor\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2025-06-17 21:01:20 --> mysqli_sql_exception: Table 'produtos' already exists in C:\wamp64\www\back-puuuramor\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\back-puuuramor\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `p...', 0)
+#1 C:\wamp64\www\back-puuuramor\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 C:\wamp64\www\back-puuuramor\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 C:\wamp64\www\back-puuuramor\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 C:\wamp64\www\back-puuuramor\app\Database\Migrations\2025-06-16-220215_Createprodutos.php(34): CodeIgniter\Database\Forge->createTable('produtos')
+#5 C:\wamp64\www\back-puuuramor\system\Database\MigrationRunner.php(877): App\Database\Migrations\Produtos->up()
+#6 C:\wamp64\www\back-puuuramor\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\wamp64\www\back-puuuramor\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\wamp64\www\back-puuuramor\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\wamp64\www\back-puuuramor\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\wamp64\www\back-puuuramor\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2025-06-17 21:02:36 --> mysqli_sql_exception: Table 'produtos' already exists in C:\wamp64\www\back-puuuramor\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\back-puuuramor\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `p...', 0)
+#1 C:\wamp64\www\back-puuuramor\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 C:\wamp64\www\back-puuuramor\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 C:\wamp64\www\back-puuuramor\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 C:\wamp64\www\back-puuuramor\app\Database\Migrations\2025-06-16-220215_Createprodutos.php(34): CodeIgniter\Database\Forge->createTable('produtos')
+#5 C:\wamp64\www\back-puuuramor\system\Database\MigrationRunner.php(877): App\Database\Migrations\Produtos->up()
+#6 C:\wamp64\www\back-puuuramor\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\wamp64\www\back-puuuramor\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\wamp64\www\back-puuuramor\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\wamp64\www\back-puuuramor\system\CLI\BaseCommand.php(114): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\wamp64\www\back-puuuramor\system\Commands\Database\MigrateRefresh.php(85): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#11 C:\wamp64\www\back-puuuramor\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 C:\wamp64\www\back-puuuramor\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 C:\wamp64\www\back-puuuramor\spark(97): CodeIgniter\CLI\Console->run()
+#14 {main}
+ERROR - 2025-06-17 21:26:42 --> mysqli_sql_exception: Table 'sistema_prod.doacaos' doesn't exist in C:\wamp64\www\back-puuuramor\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\back-puuuramor\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\back-puuuramor\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\back-puuuramor\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\back-puuuramor\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\back-puuuramor\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\back-puuuramor\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\back-puuuramor\app\Controllers\DoacaoDash.php(13): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\back-puuuramor\system\CodeIgniter.php(932): App\Controllers\DoacaoDash->Listar2()
+#8 C:\wamp64\www\back-puuuramor\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DoacaoDash))
+#9 C:\wamp64\www\back-puuuramor\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\back-puuuramor\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\wamp64\www\back-puuuramor\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\b...')
+#12 {main}
+CRITICAL - 2025-06-17 21:26:42 --> Table 'sistema_prod.doacaos' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `doacaos`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `doacaos`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `doacaos`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `doacaos`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\DoacaoDash.php(13): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DoacaoDash->Listar2()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DoacaoDash))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\back-puuuramor\\public\\index.php')
+CRITICAL - 2025-06-17 21:27:20 --> Undefined variable $animais
+in APPPATH\Views\animais_doacao\listar2.php on line 85.
+ 1 APPPATH\Views\animais_doacao\listar2.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $animais', 'C:\\wamp64\\www\\back-puuuramor\\app\\Views\\animais_doacao\\listar2.php', 85)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\wamp64\\www\\back-puuuramor\\app\\Views\\animais_doacao\\listar2.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('animais_doacao/listar2', [], true)
+ 5 APPPATH\Controllers\DoacaoDash.php(17): view('animais_doacao/listar2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DoacaoDash->Listar2()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DoacaoDash))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\back-puuuramor\\public\\index.php')
+CRITICAL - 2025-06-17 21:54:04 --> Undefined variable $animais
+in APPPATH\Views\animais_doacao\listar2.php on line 85.
+ 1 APPPATH\Views\animais_doacao\listar2.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $animais', 'C:\\wamp64\\www\\back-puuuramor\\app\\Views\\animais_doacao\\listar2.php', 85)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\wamp64\\www\\back-puuuramor\\app\\Views\\animais_doacao\\listar2.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('animais_doacao/listar2', [], true)
+ 5 APPPATH\Controllers\DoacaoDash.php(17): view('animais_doacao/listar2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DoacaoDash->Listar2()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DoacaoDash))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\back-puuuramor\\public\\index.php')
+INFO - 2025-06-17 22:42:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 22:48:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-17 22:48:41 --> Undefined array key "id"
+in APPPATH\Controllers\DoacaoDash.php on line 52.
+ 1 APPPATH\Controllers\DoacaoDash.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\back-puuuramor\\app\\Controllers\\DoacaoDash.php', 52)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DoacaoDash->editar()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DoacaoDash))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\back-puuuramor\\public\\index.php')
+INFO - 2025-06-17 22:51:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 22:51:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 22:51:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 22:51:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 22:51:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 22:51:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 22:51:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 22:51:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 22:51:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 22:51:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 22:51:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 22:51:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 22:51:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 22:53:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-17 22:53:27 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\DoacaoDash.php(70): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DoacaoDash->editar()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DoacaoDash))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\back-puuuramor\\public\\index.php')
+INFO - 2025-06-17 22:54:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 22:54:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 22:54:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 22:54:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 22:54:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-17 22:54:56 --> Undefined array key "id"
+in APPPATH\Controllers\DoacaoDash.php on line 52.
+ 1 APPPATH\Controllers\DoacaoDash.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\back-puuuramor\\app\\Controllers\\DoacaoDash.php', 52)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DoacaoDash->editar()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DoacaoDash))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\back-puuuramor\\public\\index.php')
+CRITICAL - 2025-06-17 22:55:55 --> Undefined array key "id"
+in APPPATH\Controllers\DoacaoDash.php on line 52.
+ 1 APPPATH\Controllers\DoacaoDash.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\back-puuuramor\\app\\Controllers\\DoacaoDash.php', 52)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DoacaoDash->editar()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DoacaoDash))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\back-puuuramor\\public\\index.php')
+INFO - 2025-06-17 22:56:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 22:56:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 22:56:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 22:57:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 22:57:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 22:57:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 22:57:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 22:57:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
