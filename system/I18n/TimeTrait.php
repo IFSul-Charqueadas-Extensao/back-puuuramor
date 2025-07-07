@@ -79,14 +79,14 @@ trait TimeTrait
         if ($time === '' && static::$testNow instanceof self) {
             if ($timezone !== null) {
                 $testNow = static::$testNow->setTimezone($timezone);
-                $time = $testNow->format('Y-m-d H:i:s');
+                $time    = $testNow->format('Y-m-d H:i:s');
             } else {
                 $timezone = static::$testNow->getTimezone();
-                $time = static::$testNow->format('Y-m-d H:i:s');
+                $time     = static::$testNow->format('Y-m-d H:i:s');
             }
         }
 
-        $timezone = $timezone ?: date_default_timezone_get();
+        $timezone       = $timezone ?: date_default_timezone_get();
         $this->timezone = $timezone instanceof DateTimeZone ? $timezone : new DateTimeZone($timezone);
 
         // If the time string was a relative string (i.e. 'next Tuesday')
@@ -217,7 +217,7 @@ trait TimeTrait
         $year ??= date('Y');
         $month ??= date('m');
         $day ??= date('d');
-        $hour = empty($hour) ? 0 : $hour;
+        $hour    = empty($hour) ? 0 : $hour;
         $minutes = empty($minutes) ? 0 : $minutes;
         $seconds = empty($seconds) ? 0 : $seconds;
 
@@ -228,8 +228,8 @@ trait TimeTrait
      * Provides a replacement for DateTime's own createFromFormat function, that provides
      * more flexible timeZone handling
      *
-     * @param string $format
-     * @param string $datetime
+     * @param string                   $format
+     * @param string                   $datetime
      * @param DateTimeZone|string|null $timezone
      *
      * @return self
@@ -239,7 +239,7 @@ trait TimeTrait
     #[ReturnTypeWillChange]
     public static function createFromFormat($format, $datetime, $timezone = null)
     {
-        if (!$date = parent::createFromFormat($format, $datetime)) {
+        if (! $date = parent::createFromFormat($format, $datetime)) {
             throw I18nException::forInvalidFormat($format);
         }
 
@@ -272,7 +272,7 @@ trait TimeTrait
      */
     public static function createFromInstance(DateTimeInterface $dateTime, ?string $locale = null)
     {
-        $date = $dateTime->format('Y-m-d H:i:s');
+        $date     = $dateTime->format('Y-m-d H:i:s');
         $timezone = $dateTime->getTimezone();
 
         return new self($date, $timezone, $locale);
@@ -318,7 +318,7 @@ trait TimeTrait
      * when calling 'Time::now()' instead of the current time.
      *
      * @param DateTimeInterface|self|string|null $datetime
-     * @param DateTimeZone|string|null $timezone
+     * @param DateTimeZone|string|null           $timezone
      *
      * @throws Exception
      */
@@ -334,7 +334,7 @@ trait TimeTrait
         // Convert to a Time instance
         if (is_string($datetime)) {
             $datetime = new self($datetime, $timezone, $locale);
-        } elseif ($datetime instanceof DateTimeInterface && !$datetime instanceof self) {
+        } elseif ($datetime instanceof DateTimeInterface && ! $datetime instanceof self) {
             $datetime = new self($datetime->format('Y-m-d H:i:s'), $timezone);
         }
 
@@ -544,7 +544,7 @@ trait TimeTrait
             throw I18nException::forInvalidMonth($value);
         }
 
-        if (is_string($value) && !is_numeric($value)) {
+        if (is_string($value) && ! is_numeric($value)) {
             $value = date('m', strtotime("{$value} 1 2017"));
         }
 
@@ -566,7 +566,7 @@ trait TimeTrait
             throw I18nException::forInvalidDay($value);
         }
 
-        $date = $this->getYear() . '-' . $this->getMonth();
+        $date    = $this->getYear() . '-' . $this->getMonth();
         $lastDay = date('t', strtotime($date));
         if ($value > $lastDay) {
             throw I18nException::forInvalidOverDay($lastDay, $value);
@@ -645,12 +645,12 @@ trait TimeTrait
         ${$name} = $value;
 
         return self::create(
-            (int)$year,
-            (int)$month,
-            (int)$day,
-            (int)$hour,
-            (int)$minute,
-            (int)$second,
+            (int) $year,
+            (int) $month,
+            (int) $day,
+            (int) $hour,
+            (int) $minute,
+            (int) $second,
             $this->getTimezoneName(),
             $this->locale
         );
@@ -965,7 +965,7 @@ trait TimeTrait
     public function isBefore($testTime, ?string $timezone = null): bool
     {
         $testTime = $this->getUTCObject($testTime, $timezone)->getTimestamp();
-        $ourTime = $this->getTimestamp();
+        $ourTime  = $this->getTimestamp();
 
         return $ourTime < $testTime;
     }
@@ -981,7 +981,7 @@ trait TimeTrait
     public function isAfter($testTime, ?string $timezone = null): bool
     {
         $testTime = $this->getUTCObject($testTime, $timezone)->getTimestamp();
-        $ourTime = $this->getTimestamp();
+        $ourTime  = $this->getTimestamp();
 
         return $ourTime > $testTime;
     }
@@ -1004,13 +1004,13 @@ trait TimeTrait
      */
     public function humanize()
     {
-        $now = IntlCalendar::fromDateTime(self::now($this->timezone));
+        $now  = IntlCalendar::fromDateTime(self::now($this->timezone));
         $time = $this->getCalendar()->getTime();
 
-        $years = $now->fieldDifference($time, IntlCalendar::FIELD_YEAR);
-        $months = $now->fieldDifference($time, IntlCalendar::FIELD_MONTH);
-        $days = $now->fieldDifference($time, IntlCalendar::FIELD_DAY_OF_YEAR);
-        $hours = $now->fieldDifference($time, IntlCalendar::FIELD_HOUR_OF_DAY);
+        $years   = $now->fieldDifference($time, IntlCalendar::FIELD_YEAR);
+        $months  = $now->fieldDifference($time, IntlCalendar::FIELD_MONTH);
+        $days    = $now->fieldDifference($time, IntlCalendar::FIELD_DAY_OF_YEAR);
+        $hours   = $now->fieldDifference($time, IntlCalendar::FIELD_HOUR_OF_DAY);
         $minutes = $now->fieldDifference($time, IntlCalendar::FIELD_MINUTE);
 
         $phrase = null;
@@ -1022,7 +1022,7 @@ trait TimeTrait
             $phrase = lang('Time.months', [abs($months)]);
             $before = $months < 0;
         } elseif ($days !== 0 && (abs($days) >= 7)) {
-            $weeks = ceil($days / 7);
+            $weeks  = ceil($days / 7);
             $phrase = lang('Time.weeks', [abs($weeks)]);
             $before = $days < 0;
         } elseif ($days !== 0) {
@@ -1057,7 +1057,7 @@ trait TimeTrait
     public function difference($testTime, ?string $timezone = null)
     {
         $testTime = $this->getUTCObject($testTime, $timezone);
-        $ourTime = $this->getUTCObject($this);
+        $ourTime  = $this->getUTCObject($this);
 
         return new TimeDifference($ourTime, $testTime);
     }
@@ -1082,7 +1082,7 @@ trait TimeTrait
         } elseif (is_string($time)) {
             $timezone = $timezone ?: $this->timezone;
             $timezone = $timezone instanceof DateTimeZone ? $timezone : new DateTimeZone($timezone);
-            $time = new DateTime($time, $timezone);
+            $time     = new DateTime($time, $timezone);
         }
 
         if ($time instanceof DateTime || $time instanceof DateTimeImmutable) {

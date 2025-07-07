@@ -76,7 +76,7 @@ class Auth extends ShieldAuth
      */
     public array $redirects = [
         'register'          => '/',
-        'login'             => '/',
+        'login'             => 'adotar/listar',
         'logout'            => 'login',
         'force_reset'       => '/',
         'permission_denied' => '/',

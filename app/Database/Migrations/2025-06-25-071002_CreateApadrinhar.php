@@ -26,3 +26,4 @@ class CreateApadrinhar extends Migration
         $this->forge->dropTable("apadrinhar");
     }
 }
+

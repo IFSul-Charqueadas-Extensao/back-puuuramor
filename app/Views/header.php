@@ -1,4 +1,4 @@
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-xxl navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="<?= base_url('')?>">Puuuramor</a>
             <div class="logo"></div>
@@ -24,6 +24,18 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?= base_url('transparencia') ?>">Transparência</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= base_url('resgates') ?>">Resgates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= base_url('loja') ?>">Loja</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= base_url('parceiros') ?>">Apoiadores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= base_url('contatos') ?>">Contatos</a>
                     </li>
                 </ul>
             </div>

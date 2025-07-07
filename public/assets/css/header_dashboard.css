@@ -1,0 +1,41 @@
+body {
+  font-family: "Capriola", sans-serif;
+}
+
+.navbar {
+  background-color: #8c7db1;
+}
+
+.navbar .navbar-brand,
+.nav-link {
+  color: white !important;
+  transition: color 0.3s ease-in-out;
+}
+.nav-link:hover {
+  color: #ffffffa4 !important;
+}
+
+.navbar-toggler {
+  border: 1px solid #ffffff66;
+}
+
+@media (max-width: 767.98px) {
+  .navbar ul li {
+    gap: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .navbar ul li a {
+    border-radius: 5px;
+  }
+  .navbar ul {
+    margin-top: 10px;
+    border-radius: 10px !important;
+    text-align: center;
+    background-color: #b5a3e0;
+  }
+  .navbar ul li:last-child {
+    border-bottom: none;
+  }
+}

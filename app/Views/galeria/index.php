@@ -15,6 +15,7 @@
 <body>
     <?php echo View('header.php') ?>
 
+    
     <section id="galeria-posts" class="container py-5 text-center">
         <h2 class="mt-5 mb-3">Galeria</h2>
         <p class="mb-5">Confira os registros dos nossos bichinhos!</p>

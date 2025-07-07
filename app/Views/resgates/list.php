@@ -14,6 +14,7 @@
   </script>
 </head>
 <body>
+  <?php echo View('templates/header_dashboard.php')?>
   <div class="container mt-5">
     <?php if (session()->getFlashdata('erro')): ?>
       <div class="alert alert-danger"><?= esc(session()->getFlashdata('erro')) ?></div>
