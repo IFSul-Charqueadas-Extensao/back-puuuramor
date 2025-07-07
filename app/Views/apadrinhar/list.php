@@ -19,6 +19,7 @@
   </script>
 </head>
 <body>
+  <?php echo View('templates/header_dashboard.php')?>
   <div class="container mt-5">
     <div class="row">
       <div class="col-12">

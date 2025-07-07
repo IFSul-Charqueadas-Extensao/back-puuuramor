@@ -37,95 +37,63 @@ $routes->get('/parceiros', 'Parceiros::index');
 $routes->get('/resgates', 'Resgates::index');
 $routes->get('/transparencia', 'Transparencia::index');
 $routes->get('/quero_ajudar', 'Quero_Ajudar::index');
-
-//----- Galeria -----//
 $routes->get('/galeria', 'Galeria::index');
-
-//Lista
-$routes->get("/galeria/listar", "Galeria::list");
-
-//Adicionar
-$routes->get("/galeria/criar", "Galeria::create");
-$routes->post("/galeria/salvar", "Galeria::store");
-
-//Editar
-$routes->get("/galeria/editar/(:num)", "Galeria::edit/$1");
-
-//Deletar
-$routes->post("/galeria/deletar/(:num)", "Galeria::delete/$1");
-
-//Exibir(Modal)
-$routes->get('galeria/exibir/(:num)', 'Galeria::exibir/$1');
-
-//----- Apadrinhar -----//
+$routes->get('/galeria/exibir/(:num)', 'Galeria::exibir/$1');
 $routes->get('/apadrinhar', 'Apadrinhar::index');
-
-//Lista
-$routes->get("/apadrinhar/listar", "Apadrinhar::list");
-
-//Adicionar
-$routes->get("/apadrinhar/criar", "Apadrinhar::create");
-$routes->post("/apadrinhar/salvar", "Apadrinhar::store");
-
-//Editar
-$routes->get("/apadrinhar/editar/(:num)", "Apadrinhar::edit/$1");
-
-//Deletar
-$routes->post("/apadrinhar/deletar/(:num)", "Apadrinhar::delete/$1");
-
-//Exibir(Modal)
-$routes->get('apadrinhar/exibir/(:num)', 'Apadrinhar::exibir/$1');
-
-//Adotar 
-$routes->group('adotar', function($routes){
-    $routes->get('/', 'Adotar::index');
-    $routes->get('listar', 'Adotar::list');
-    $routes->get('criar', 'Adotar::create');
-    $routes->get('editar/(:num)', 'Adotar::edit/$1');
-    $routes->post('salvar', 'Adotar::store');
-    $routes->post('deletar/(:num)', 'Adotar::delete/$1');
-    $routes->get('exibir/(:num)', 'Adotar::exibir/$1');
-});
-
-
-//loja
-$routes->get('loja', 'Loja::index');
-$routes->get('loja/listar', 'Loja::listar');
+$routes->get('/apadrinhar/exibir/(:num)', 'Apadrinhar::exibir/$1');
+$routes->get('/adotar', 'Adotar::index');
+$routes->get('/adotar/exibir/(:num)', 'Adotar::exibir/$1');
+$routes->get('/loja', 'Loja::index');
 $routes->get('loja/exibir/(:num)', 'Loja::exibir/$1');
-$routes->get('loja/editar/(:num)', 'Loja::edit/$1');
-$routes->post('loja/salvar', 'Loja::store');
-$routes->get('loja/criar', 'Loja::create');
-$routes->post('loja/deletar/(:num)', 'Loja::delete/$1');
-
-
-//Routes
-$routes->group('resgates', function($routes) {
-    // Página principal mostrando as histórias de resgate (lista)
-    $routes->get('', 'Resgates::index');
-
-    // Rota para mostrar detalhes via AJAX (JSON)
-    $routes->get('exibir/(:num)', 'Resgates::exibir/$1');
-
-    // Rotas para administração (se quiser)
-    $routes->get('criar', 'Resgates::create');
-    $routes->post('salvar', 'Resgates::store');
-    $routes->get('editar/(:num)', 'Resgates::edit/$1');
-    $routes->post('deletar/(:num)', 'Resgates::delete/$1');
-
-    // Lista para administração (opcional)
-    $routes->get('listar', 'Resgates::list');
-});
-
+$routes->get('/resgates', 'Resgates::index');
+$routes->get('/resgates/exibir/(:num)', 'Resgates::exibir/$1');
 
 // Shield Routes
-//service('auth')->routes($routes);
+service('auth')->routes($routes);
+$routes->get('login', 'LoginController::index');
+$routes->get('logout', '\CodeIgniter\Shield\Controllers\LoginController::logout');
 
-// service('auth')->routes($routes, [
-//     'except' => ['register', 'magic-link', 'forgot', 'reset-password']
-// ]);
+service('auth')->routes($routes, [
+    'except' => ['register', 'magic-link', 'forgot', 'reset-password']
+]);
 
 // Protected Routes
 $routes->group('', ['filter' => 'session'], static function($routes) {
+    //----- Galeria -----//
+    $routes->get("/galeria/listar", "Galeria::list");
+    $routes->get("/galeria/criar", "Galeria::create");
+    $routes->post("/galeria/salvar", "Galeria::store");
+    $routes->get("/galeria/editar/(:num)", "Galeria::edit/$1");
+    $routes->post("/galeria/deletar/(:num)", "Galeria::delete/$1");
+
+
+    //----- Apadrinhar -----//
+    $routes->get("/apadrinhar/listar", "Apadrinhar::list");
+    $routes->get("/apadrinhar/criar", "Apadrinhar::create");
+    $routes->post("/apadrinhar/salvar", "Apadrinhar::store");
+    $routes->get("/apadrinhar/editar/(:num)", "Apadrinhar::edit/$1");
+    $routes->post("/apadrinhar/deletar/(:num)", "Apadrinhar::delete/$1");
+
+    //----- Adotar -----//
+    $routes->get('/adotar/listar', 'Adotar::list');
+    $routes->get('/adotar/criar', 'Adotar::create');
+    $routes->get('/adotar/editar/(:num)', 'Adotar::edit/$1');
+    $routes->post('/adotar/salvar', 'Adotar::store');
+    $routes->post('/adotar/deletar/(:num)', 'Adotar::delete/$1');
+
+    //----- Loja -----//
+    $routes->get('/loja/listar', 'Loja::listar');
+    $routes->get('/loja/editar/(:num)', 'Loja::edit/$1');
+    $routes->post('/loja/salvar', 'Loja::store');
+    $routes->get('/loja/criar', 'Loja::create');
+    $routes->post('/loja/deletar/(:num)', 'Loja::delete/$1');
+
+    //----- Resgates -----//
+    $routes->get('/resgates/criar', 'Resgates::create');
+    $routes->post('/resgates/salvar', 'Resgates::store');
+    $routes->get('/resgates/editar/(:num)', 'Resgates::edit/$1');
+    $routes->post('/resgates/deletar/(:num)', 'Resgates::delete/$1');
+    $routes->get('/resgates/listar', 'Resgates::list');
 });
 
 

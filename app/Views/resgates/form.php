@@ -10,6 +10,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
+  <?php echo View('templates/header_dashboard.php')?>
   <div class="container my-5">
     <h2 class="mb-4 text-center"><?= isset($resgate) ? 'Editar História de Resgate' : 'Nova História de Resgate' ?></h2>
 

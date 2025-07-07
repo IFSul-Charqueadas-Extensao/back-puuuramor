@@ -10,6 +10,7 @@
   <title>Apadrinhar - adicionar</title>
 </head>
 <body>
+  <?php echo View('templates/header_dashboard.php')?>
   <div class="container my-5">
     <div class="row justify-content-center">
       <?php if (session()->getFlashdata('errors')): ?>
