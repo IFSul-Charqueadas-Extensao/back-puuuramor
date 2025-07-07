@@ -19,7 +19,9 @@
         <h1 style="z-index: 2;">Bem-vindo à Puuuramor</h1>
         <p style="z-index: 2;">Uma ONG dedicada ao resgate e adoção de animais em busca de um lar amoroso.</p>
         <a href="<?= base_url('adotar')?>" class="btn-hero" style="z-index: 2;">Ver animais para adoção</a>
-    </section>    
+    </section>
+
+    <!-- Comentário -->
 
     <footer class="footer text-center">
         <p>&copy; 2025 Puuuramor - Todos os direitos reservados</p>
