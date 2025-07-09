@@ -37,6 +37,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="<?= base_url('contatos') ?>">Contatos</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= base_url('politica_de_adocao') ?>">Contatos</a>
+                    </li>
                 </ul>
             </div>
         </div>

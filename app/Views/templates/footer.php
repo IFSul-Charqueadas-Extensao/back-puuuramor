@@ -17,6 +17,7 @@
                     <li><a href="/contatos" class="text-light">Contatos</a></li>
                     <li><a href="/apadrinhar" class="text-light">Apadrinhar</a></li>
                     <li><a href="/transparencia" class="text-light">Transparencia</a></li>
+                    <li><a href="/politica_de_adocao" class="text-light">Política de Adoção</a></li>
                 </ul>
             </div>
             <div class="col-md-4 mb-3">
