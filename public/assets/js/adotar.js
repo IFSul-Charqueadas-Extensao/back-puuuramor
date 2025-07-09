@@ -3,7 +3,7 @@ const nome = document.querySelector("#modal-title");
 const descricao = document.querySelector("#modal-description");
 const btnWhatsapp = document.querySelector("#link-whatsapp");
 
-const NUMERO_WHATSAPP = "559999999999"; // Altere com o número oficial
+const NUMERO_WHATSAPP = "5551981536015"; // Altere com o número oficial
 
 modalSaibaMais.addEventListener("show.bs.modal", function (e) {
   const idPet = e.relatedTarget.dataset.id;
@@ -21,11 +21,10 @@ modalSaibaMais.addEventListener("show.bs.modal", function (e) {
       btnWhatsapp.href = "#";
       return;
     }
+    localStorage.setItem('pet', response.data.pet.nome); // nome do pet pro formulario
 
     nome.textContent = response.data.pet.nome;
     descricao.textContent = response.data.pet.descricao;
-    const mensagem = `Olá! Gostaria de adotar o pet ${response.data.pet.nome}.`;
-    btnWhatsapp.href = `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(mensagem)}`;
   }).catch(() => {
     modalError.textContent = "Erro ao buscar informações do pet.";
     modalError.classList.remove("d-none");
