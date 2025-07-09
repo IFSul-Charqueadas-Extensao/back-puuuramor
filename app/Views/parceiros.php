@@ -196,10 +196,6 @@
         </div>
         </div>
     </section>
-
-    <footer class="footer text-center">
-        <p>&copy; 2025 Puuuramor - Todos os direitos reservados</p>
-    </footer>
                     
     <!-- Modal de Contato -->
     <div class="modal fade" id="contatoModal" tabindex="-1" aria-labelledby="contatoModalLabel" aria-hidden="true">
@@ -227,3 +223,6 @@
         </div>
     </div>
 </html>
+
+<?php echo View('templates/footer') ?>
+

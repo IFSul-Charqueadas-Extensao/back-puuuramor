@@ -41,3 +41,6 @@
     </section>
 </body>
 </html>
+
+<?php echo View('templates/footer') ?>
+

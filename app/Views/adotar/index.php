@@ -76,11 +76,7 @@
             </div>
         </div>
     </section>
-        <footer class="footer text-center">
-        <p>&copy; 2025 Puuuramor - Todos os direitos reservados</p>
-            <a href="<?= base_url('/politica_de_adocao')?>"
-            <p class="nav-link" style="display: inline-block; width: auto;">Politica de Adoção</p>
-        </a>
-    </footer>
 </body>
 </html>
+
+<?php echo View('templates/footer') ?>

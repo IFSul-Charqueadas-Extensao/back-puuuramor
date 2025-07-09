@@ -80,9 +80,8 @@
         </div>
     </div>
 
-    <footer class="footer text-center mt-5">
-        <p>&copy; 2025 Puuuramor - Todos os direitos reservados</p>
-    </footer>
 </body>
 
 </html>
+
+<?php echo View('templates/footer') ?>
