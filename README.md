@@ -12,7 +12,7 @@ Antes de começar, certifique-se de que o computador onde o projeto será config
 Copie o projeto para o computador de destino. Você pode fazer isso via Git ou manualmente:
 ### Via Git:
     cd C:\wamp64\www\
-    git clone <URL_DO_REPOSITORIO>
+    git clone <https://github.com/IFSul-Charqueadas-Extensao/back-puuuramor>
 
 ## Instalar Dependências Composer
 Baixar o [Composer](https://getcomposer.org/Composer-Setup.exe)
@@ -64,7 +64,7 @@ Acesse: http://localhost:8080
 ## Editar credenciais do usuário administrador:
 
 - Configure as credenciais do usuário admin:
-- O arquivo de configuração AdminUserSeeder.php se encontra no diretório `/app/Config/Database/Seeds/AdminUserSeeder.php`.
+- O arquivo de configuração AdminUserSeeder.php se encontra no diretório `/app/Database/Seeds/AdminUserSeeder.php`.
  - Edite as seguintes variáveis
  
 | Variável    | Descrição             |
